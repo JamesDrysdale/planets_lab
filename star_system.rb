@@ -17,13 +17,7 @@ class StarSystem
 
   def get_largest_planet()
     planet_sizes = @planets.map { |planet| planet.diameter }
-    #p planet_sizes.max
     return @planets.find{|planet| planet.diameter == planet_sizes.max}
-    # for planet in @planets
-    #   if(planet.diameter == planet_sizes.max)
-    #     return planet
-    #   end
-    # end
   end
 
   def get_smallest_planet()
@@ -45,4 +39,14 @@ class StarSystem
     planet_name = @planets.find_all { |planet| planet.distance_from_sun < distance }
     return planet_name.length
   end
+
+  def get_total_number_of_moons()
+      moon_amount = 0
+      # for moon in @planets
+      #   moon_amount += moon.number_of_moons
+      # end
+      # return moon_amount
+      
+  end
+
 end
