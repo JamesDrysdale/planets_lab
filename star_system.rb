@@ -33,4 +33,9 @@ def get_planets_with_more_moons(moons)
   return planet_name.map { |planet| planet.name }
 end
 
+def get_number_of_planets_closer_than(distance)
+  planet_name = @planets.find_all { |planet| planet.distance_from_sun < distance }
+  return planet_name.length
+end
+
 end
