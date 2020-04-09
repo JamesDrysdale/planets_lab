@@ -46,7 +46,9 @@ class StarSystem
       #   moon_amount += moon.number_of_moons
       # end
       # return moon_amount
-      
+      # numbers.reduce { |sum, number| sum + number }
+      moon_amount = @planets.reduce { |sum, planet.number_of_moons| sum + planet.number_of_moons }
   end
+    
 
 end
