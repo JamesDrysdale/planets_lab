@@ -23,11 +23,14 @@ def get_largest_planet()
  return planet_sizes
 end
 
-
 def get_planets_with_no_moons()
   planet_name = @planets.find_all { |planet| planet.number_of_moons == 0 }
   return planet_name
 end
 
+def get_planets_with_more_moons(moons)
+  planet_name = @planets.find_all { |planet| planet.number_of_moons > moons }
+  return planet_name.map { |planet| planet.name }
+end
 
 end
